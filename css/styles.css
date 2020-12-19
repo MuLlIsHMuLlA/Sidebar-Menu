@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .3s ease;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: #ffff;
+    text-align: center;
+    line-height: 70px;
+    background: #063146
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-weight: 20px;
+    color: #fff;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid #000000;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+#boxcheck {
+    display: none;
+}
+
+label #button,label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+
+}
+
+label #button {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: #fff;
+    padding: 6px 12px;
+    transition: all .3s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all .3s ease;
+}
+
+#boxcheck:checked ~ .sidebar {
+    left: 0;
+}
+
+#boxcheck:checked ~ label #button {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#boxcheck:checked ~ label #cancel {
+    left: 195px;
+}
+
+#boxcheck:checked ~ section {
+    margin-left: 250px; 
+}
+
+#bgimage {
+    background: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 200vh;
+    transition: all .3s;
+}
